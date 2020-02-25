@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}
+    Departments
+{% endblock %}
+
+{% block content %}
+<h1>Departments</h1>
+<button type="button" class="btn btn-primary js-add-field">
+    +
+    </button>
+<table class="table" id="table_all">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>code</th>
+		</tr>
+	</thead>
+<tbody>
+	{% for dept in All_depts %}
+	<tr>
+		<td>{{ dept.name }}</td>
+		<td>{{ dept.dept_code }}</td>
+	<td>
+      <button type="button"
+        	  class="btn btn-warning btn-sm js-update-for-all"
+              data-url="{% url 'Profiler:dept_update' name=dept.name %}">
+       Edit
+      </button>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<div class="modal fade" id="modal-all">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+	</div>
+</div>
+{% endblock %}

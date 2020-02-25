@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^$', views.index, name="index"),
     url(r'^accountant/', include('Accountant.urls')),
     url(r'^admin/', main_admin.urls, name='main_admin'),
-    url(r'^institute_admin/', institute_admin_site.urls, name='institute_admin')
+    url(r'^institute_admin/', institute_admin_site.urls, name='institute_admin'),
+    url(r'^profiler/',include('Profiler.urls'))
 ]

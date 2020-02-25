@@ -12,18 +12,22 @@
         {% endblock %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS CDN -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto+Slab:700" rel="stylesheet"> -->
-
-    <!-- Offline Loaders -->
     <link rel="stylesheet" type="text/css" media="screen" href='{% static "css/bootstrap.min.css" %}'>
     <link rel="stylesheet" type="text/css" media="screen" href='{% static "css/googlefont.css" %}'>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href='{% static "css/main.css" %}'>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="{% static 'css/all_page.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+    <!-- Custom JS -->
+    <script src='{% static "js/main.js" %}'></script>
 </head>
 
 <body>
@@ -61,15 +65,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script> -->
-
-    <!-- Offline JS -->
-    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-
-    <!-- Custom JS -->
-    <script src='{% static "js/main.js" %}'></script>
 </body>
-
 </html>

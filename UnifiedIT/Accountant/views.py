@@ -34,7 +34,6 @@ def admin_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-
         try:
             user = get_user_model().objects.get(username=username)
             valid = check_password(password, encoded=user.password)

@@ -1,0 +1,5 @@
+ <select class="input100" type="text" name="department">
+    {% for dept in All_depts %}
+            <option value="{{dept.name}}">{{dept.name}}</option>
+    {% endfor %}
+</select>

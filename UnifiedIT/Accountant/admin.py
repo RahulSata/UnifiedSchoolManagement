@@ -141,3 +141,4 @@ class CustomUserAdmin(UserAdmin):
 main_admin.register(get_user_model(), CustomUserAdmin)
 main_admin.register(AccountRequest, AccountRequestAdmin)
 main_admin.register(Account, AccountAdmin)
+admin.register(Account, AccountAdmin)

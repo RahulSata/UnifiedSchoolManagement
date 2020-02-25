@@ -1,0 +1,15 @@
+{% for add in All_address %}
+	<tr>
+		<td>{{ add.street }}</td>
+		<td>{{ add.city }}</td>
+    <td>{{ add.state }}</td>
+    <td>{{ add.pincode }}</td>
+	<td>
+      <button type="button"
+        	  class="btn btn-warning btn-sm js-update-dept"
+            data-url="{% url 'Profiler:address_update' form.instance.street %}">
+       Edit
+      </button>
+    </td>
+</tr>
+{% endfor %}

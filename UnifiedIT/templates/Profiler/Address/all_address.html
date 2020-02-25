@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}
+    Address
+{% endblock %}
+
+{% block content %}
+<h1>Address</h1>
+<button type="button" class="btn btn-primary js-add-address">
+    +
+    </button>
+<table class="table" id="table_all">
+	<thead>
+		<tr>
+			<th>Street</th>
+			<th>city</th>
+			<th>state</th>
+		</tr>
+	</thead>
+<tbody>
+	{% for address in All_address %}
+	<tr>
+		<td>{{ address.street }}</td>
+		<td>{{ address.city }}</td>
+		<td>{{ address.state }}</td>
+		<td>
+      <button type="button"
+        	  class="btn btn-warning btn-sm js-update-for-all"
+              >
+       Edit
+      </button>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<div class="modal fade" id="modal-all">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+	</div>
+</div>
+{% endblock %}

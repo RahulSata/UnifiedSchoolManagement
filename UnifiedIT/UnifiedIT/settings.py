@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'Accountant',
     'Profiler'
 ]
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'UnifiedIT',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'admin',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -110,11 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'Accountant.User'
-
-AUTHENTICATION_BACKENDS = [
-    'Accountant.custom_auth.CustomBackend',
-    # 'django.contrib.auth.backends.ModelBackend'
-]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

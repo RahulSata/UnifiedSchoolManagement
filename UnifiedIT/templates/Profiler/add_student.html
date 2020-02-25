@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <code>Please wait while the website gets ready! P</code>
+    </div>
+
+    Username : <input type="text" name = "username"><br>
+    Email    : <input type="text" name = "email"><br>
+    Password : <input type="password" name = "password"><br>
+    Firstname: <input type="text" name = "firstname"><br>
+    Lastname : <input type="text" name = "lastname"><br>
+    Birthdate: <input type="date" name = "birthdate"><br>
+    Gender:<select name="gender">
+    		<option value="Male">Male</option>
+    		<option value="Female">Female</option>
+    	   </select>
+    Startdate: <input type="date" name = "startdate"><br>
+    Address :
+    <div id ="address_db">
+    {% include 'Profiler/Address/dropdown.html' %}
+    </div>
+    <button type="button" class="btn btn-primary js-add-address">
+        +
+    </button>
+    
+    Department:<div id ="cur_db">
+    {% include 'Profiler/dropdown.html' %}
+    </div>
+    <button type="button" class="btn btn-primary js-add-field">
+        +
+    </button>
+
+    <div class="modal fade" id="modal-all">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      </div>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+
+<script> 
+</script>
+
+{% endblock %}
+

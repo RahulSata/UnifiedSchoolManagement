@@ -1,0 +1,13 @@
+{% for dept in All_depts %}
+	<tr>
+		<td>{{ dept.name }}</td>
+		<td>{{ dept.dept_code }}</td>
+	<td>
+      <button type="button"
+        	  class="btn btn-warning btn-sm js-update-dept"
+            data-url="{% url 'Profiler:dept_update' dept.name %}">
+       Edit
+      </button>
+    </td>
+</tr>
+{% endfor %}

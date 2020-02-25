@@ -8,9 +8,16 @@
     <div class="container">
         <h1>Welcome, {{ username }}!</h1>
 		{% load static %}
-		<form action="profiler/control_panel/" method="post">{% csrf_token %}
-			<button>ControlPanel</button>
+		<form action="add_student/" method="post">{% csrf_token %}
+			<button>Add Student</button>
 		</form>
+		<form action="departments/">{% csrf_token %}
+			<button>Departments</button>
+		</form>
+        <form action="address/">{% csrf_token %}
+			<button>Address</button>
+		</form>
+        
         <code>Please wait while the website gets ready! P</code>
     </div>
 {% endblock %}
